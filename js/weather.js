@@ -22,5 +22,15 @@ function getWeatherInfo() {
 
 //Function to connect to the MapQuest Geocoding API and get the geocoding data
 function geocode() {
-
+// Base URL + API KEY + & Location+ + address
+$.ajax("http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC")
+.done(function(data) {
+    console.log(data);
+  })
+  .fail(function(error) {
+    console.log(error);
+  })
+  .always(function() {
+    console.log("GeoCode call complete");
+  });
 }
