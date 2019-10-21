@@ -57,10 +57,33 @@
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Address/City/Zip" aria-label="Search">
-                <button type="button" class="btn btn-outline-primary">Get Weather</button>
+                <button id="submit" type="button" class="btn btn-outline-primary">Get Weather</button>
               </form>
             </div>
           </nav>
+          <!--End of Nav Bar-->
+
+          <!--Weather card-->
+          <div class="container">
+              <div class="row">
+                <div id="template">
+                    <div class="col-xs-12 col-lg-4">
+                        <div id="weatherCard">
+                            <button type="button" id="remove">
+                                X
+                            </button>
+                            <ul id="listTest" class="list-group list-group-flush">
+                                    <li class="list-group=item">Location: @@cityState@@</li>
+                                    <li class="list-group=item">Current Condition: @@condition@@</li>
+                                    <li class="list-group=item">High Temp: @@highTemp@@°F</li>
+                                    <li class="list-group=item">Low Temp: @@lowTemp@@°F</li>
+                                    <li class="list-group=item">Chance of Precipitation: @@precipitation@@%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
@@ -71,7 +94,7 @@
 
     <!--API Keys File-->
     <script
-     scr="../js/apiKeys.js"></script>
+     src="../js/apiKeys.js"></script>
     
     <!--Custom JS-->
     <script
